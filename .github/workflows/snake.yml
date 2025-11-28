@@ -1,14 +1,9 @@
 name: Generate Snake
 
 on:
-  # Se lance automatiquement toutes les 24h (à minuit)
   schedule:
     - cron: "0 0 * * *" 
-  
-  # Permet de le lancer manuellement en cliquant sur un bouton si besoin
   workflow_dispatch:
-  
-  # Se lance à chaque fois que tu push sur la branche main/master
   push:
     branches:
     - master
@@ -24,12 +19,12 @@ jobs:
       - name: Generate Snake
         uses: Platane/snk@v3
         with:
-          # Ton username GitHub
           github_user_name: aurelienfvre
-          # Les fichiers qui seront générés
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            # Version Dark Blue (Style Tokyonight)
+            # color_snake = La couleur du serpent (ici Bleu vif)
+            # color_dots = Les couleurs des cases (Du sombre au clair : noir -> bleu foncé -> bleu clair)
+            dist/github-contribution-grid-snake.svg?color_snake=#3b82f6&color_dots=#161b22,#0d3b66,#1e40af,#3b82f6,#60a5fa
             
       - name: Push Snake to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
