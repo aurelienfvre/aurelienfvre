@@ -63,6 +63,6 @@
 
 <br/>
 <div align="center">
-<h2>🐍 Contributions</h2>
-<img src="https://github.com/aurelienfvre/aurelienfvre/blob/output/github-contribution-grid-snake.svg" alt="snake animation" width="100%"/>
+  <h2>🐍 Contributions</h2>
+  <img src="https://raw.githubusercontent.com/aurelienfvre/aurelienfvre/output/github-contribution-grid-snake.svg" alt="snake animation" width="100%"/>
 </div>
